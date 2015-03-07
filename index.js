@@ -3,6 +3,10 @@
   /*global google, downloadGoogleSpreadsheet*/
 
   var SPREADSHEET_KEY = '1LNtQpTA93X-CYaQVnZ5EBLDDRJ7es1wyplfpRpI9sxU';
+  var MAP_CENTER = {
+    lat: 46.9998691,
+    lng: 28.8581765
+  };
 
   var mapCanvas = document.getElementById('map-canvas');
   checkRequiredThings();
@@ -13,7 +17,7 @@
 
   function initializeMap() {
     var mapOptions = {
-      center: { lat: 46.9998691, lng: 28.8581765},
+      center: MAP_CENTER,
       zoom: 12
     };
 
