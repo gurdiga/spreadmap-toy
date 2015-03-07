@@ -6,7 +6,6 @@
   checkRequiredThings();
 
   google.maps.event.addDomListener(window, 'load', initializeMap);
-  downloadGoogleSpreadsheet('1LNtQpTA93X-CYaQVnZ5EBLDDRJ7es1wyplfpRpI9sxU', downloadGoogleSpreadsheetCallback);
 
   var map, info;
 
@@ -18,9 +17,10 @@
 
     map = new google.maps.Map(mapCanvas, mapOptions);
     info = new google.maps.InfoWindow({});
+    downloadGoogleSpreadsheet('1LNtQpTA93X-CYaQVnZ5EBLDDRJ7es1wyplfpRpI9sxU', drawMarkers);
   }
 
-  function downloadGoogleSpreadsheetCallback(error, rows) {
+  function drawMarkers(error, rows) {
     if (error) throw error;
 
     console.log('initial rows', rows);
@@ -29,8 +29,8 @@
       return {
         name: row[0],
         phoneNumber: row[1],
-        lat: row[2],
-        long: row[3],
+        lat: parseFloat(row[2]),
+        long: parseFloat(row[3]),
         description: row[4]
       };
     });
