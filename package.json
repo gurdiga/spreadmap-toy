@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "spreadmap-toy",
+  "version": "0.1.0",
+  "description": "A toy that draws markers on a GMap from out of data in a GSpreadsheet",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "2.2.0",
+    "chai": "2.1.1",
+    "lintspaces-cli": "0.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gurdiga/spreadmap-toy.git"
+  }
+}
