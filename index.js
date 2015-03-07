@@ -2,6 +2,8 @@
   'use strict';
   /*global google, downloadGoogleSpreadsheet*/
 
+  var SPREADSHEET_KEY = '1LNtQpTA93X-CYaQVnZ5EBLDDRJ7es1wyplfpRpI9sxU';
+
   var mapCanvas = document.getElementById('map-canvas');
   checkRequiredThings();
 
@@ -17,7 +19,9 @@
 
     map = new google.maps.Map(mapCanvas, mapOptions);
     info = new google.maps.InfoWindow({});
-    downloadGoogleSpreadsheet('1LNtQpTA93X-CYaQVnZ5EBLDDRJ7es1wyplfpRpI9sxU', drawMarkers);
+
+    console.log('loading spreadsheet', SPREADSHEET_KEY);
+    downloadGoogleSpreadsheet(SPREADSHEET_KEY, drawMarkers);
   }
 
   function drawMarkers(error, rows) {
