@@ -2,4 +2,4 @@ Given a Google spreadsheet describing locations, and aGoogle map, draws markers 
 
 Example:
 * spreadsheet: https://docs.google.com/spreadsheets/d/1LNtQpTA93X-CYaQVnZ5EBLDDRJ7es1wyplfpRpI9sxU/pubhtml
-* live: http://www.pentru.md/test.html
+* live: http://www.pentru.md/test-spreadmap-toy.html
